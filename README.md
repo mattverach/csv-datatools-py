@@ -1,7 +1,10 @@
-CSV Data Tools
+# CSV Data Tools
 
 This repository contains two Python scripts for working with CSV data - splitter.py and verify.py.
-splitter.py
+
+  
+
+## splitter.py
 
 This script reads data from an input CSV file and writes it into two output CSV files - opportunity.csv and attribute.csv. The input CSV file must have header column names starting with either "opportunity" or "attribute". The script extracts data from columns and writes them to their respective output files.
 Usage
@@ -26,8 +29,10 @@ Input
 Output
 
     Two CSV files located in the output directory, named opportunity.csv and attribute.csv.
+    
 
-verify.py
+
+## verify.py
 
 This script is designed to display the contents of CSV files in a readable format. It reads all CSV files located in the output folder created by the previous script and prints their contents to the console.
 Usage
@@ -53,7 +58,7 @@ Output
     Console output showing the contents of each CSV file. The output is formatted to be readable, with headers aligned and separated from the data by a separator line.
 
 
-upload_data.sh
+## campaignDataLoader.sh
 
 This Bash script processes the input.csv file and distributes its contents into separate CSV files, using the splitter.py Python script. It then prompts the user to verify the files either manually or by running the verify.py Python script, and finally prompts the user to enter a target org to upload the files to.
 
