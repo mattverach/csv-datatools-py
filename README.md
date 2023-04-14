@@ -51,3 +51,18 @@ Input
 Output
 
     Console output showing the contents of each CSV file. The output is formatted to be readable, with headers aligned and separated from the data by a separator line.
+
+
+upload_data.sh
+
+This Bash script processes the input.csv file and distributes its contents into separate CSV files, using the splitter.py Python script. It then prompts the user to verify the files either manually or by running the verify.py Python script, and finally prompts the user to enter a target org to upload the files to.
+
+Here are the main steps performed by the script:
+
+    Check if the input.csv file exists in the current directory. If not, the script exits with an error message.
+    Process the input.csv file using splitter.py, which generates separate CSV files in the output directory.
+    Prompt the user to verify the files either manually or by running verify.py.
+    Prompt the user to enter a target org to upload the files to. If no input is provided, the script exits with a cancellation message.
+    Execute the Salesforce CLI command to upload the files to the specified org.
+
+Note that the user should have Salesforce CLI installed and authenticated to use this script.
